@@ -12,12 +12,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Levi Nascimento Advocacia | Insalubridade e Periculosidade</title>
 <meta name="description" content="Advogado trabalhista para análise do direito ao adicional de insalubridade ou periculosidade. Fale com o escritório pelo WhatsApp e apresente sua situação.">
-<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css">
-<link rel="icon" type="image/png" href="icone.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="icone.webp">
+<link rel="preload" as="font" type="font/woff2" href="inter-latin.woff2" crossorigin>
+<link rel="preload" as="image" href="mobile-bg.webp" media="(max-width:768px)" fetchpriority="high">
+<link rel="preload" as="image" href="hero-bg.webp" media="(min-width:769px)" fetchpriority="high">
 <style>
+  @font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url('inter-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:107.12%;ascent-override:90.44%;descent-override:22.52%;line-gap-override:0%}
   :root{
     --bg:#0a0b0d;
     --bg-2:#101215;
@@ -39,15 +40,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  img{max-width:100%;display:block}
+  body{background:var(--bg);color:var(--text);font-family:'Inter','Inter Fallback',Arial,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;height:auto;display:block}
+  .ph{width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;vertical-align:middle}
   a{color:inherit;text-decoration:none}
   .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 clamp(20px,4vw,56px)}
   h1,h2,h3{font-weight:600;line-height:1.2;letter-spacing:-.01em}
   h2{font-size:clamp(26px,2.8vw,38px)}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin-bottom:16px}
   .eb-ico{display:inline-flex;color:var(--accent)}
-  .eb-ico i{font-size:17px}
+  .eb-ico .ph{font-size:17px}
   .lead{color:var(--muted);font-size:18px;max-width:760px}
   p,.answer{text-wrap:pretty}
   h1,h2,h3{text-wrap:balance}
@@ -65,10 +67,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .wa-ico{width:20px;height:20px;flex-shrink:0}
   
   .btn-note{display:flex;align-items:center;gap:8px;margin-top:16px;color:var(--muted);font-size:14px}
-  .btn-note i{font-size:17px}
+  .btn-note .ph{font-size:17px}
 
   .icon-box{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(160deg,var(--blue-2),var(--blue));color:#fff;flex-shrink:0;box-shadow:0 6px 16px -6px rgba(31,95,214,.7)}
-  .icon-box i{font-size:23px}
+  .icon-box .ph{font-size:23px}
   .card{background:#fff;color:#0b0c0e;border-radius:var(--radius);box-shadow:0 14px 34px -18px rgba(0,0,0,.6);transition:transform .2s ease, box-shadow .2s ease}
   .card:hover{transform:translateY(-3px);box-shadow:0 20px 40px -18px rgba(0,0,0,.7)}
   .card h3{color:#0b0c0e}
@@ -76,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .card p strong{color:#0b0c0e}
 
   /* Hero */
-  .hero{position:relative;height:100vh;height:100svh;min-height:600px;display:flex;align-items:center;padding:0;background:#0a0b0d url('hero-bg.png') right center/cover no-repeat}
+  .hero{position:relative;height:100vh;height:100svh;min-height:600px;display:flex;align-items:center;padding:0;background:#0a0b0d url('hero-bg.webp') right center/cover no-repeat}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,11,13,.92) 0%,rgba(10,11,13,.75) 38%,rgba(10,11,13,0) 62%),linear-gradient(0deg,var(--bg) 0%,rgba(10,11,13,0) 22%);pointer-events:none}
   .hero .container{position:relative;z-index:1}
   .hero-content{max-width:640px}
@@ -93,7 +95,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .agent{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:8px;padding:16px 20px}
   .agent-top{display:flex;align-items:center;gap:10px}
   .agent .icon-box{width:38px;height:38px;border-radius:10px}
-  .agent .icon-box i{font-size:21px}
+  .agent .icon-box .ph{font-size:21px}
   .agent h3{font-size:16px}
   .agent p{font-size:14px;line-height:1.45}
   .mini-cta{margin-top:26px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
@@ -124,12 +126,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .an-row:last-child{border-bottom:0}
   .an-num{font-size:13px;font-weight:700;color:#9aa3ae;letter-spacing:.08em;width:22px}
   .an-row .icon-box{width:40px;height:40px;border-radius:10px}
-  .an-row .icon-box i{font-size:21px}
+  .an-row .icon-box .ph{font-size:21px}
   .an-row h3{font-size:16px;color:#0b0c0e;margin-bottom:3px}
   .an-row p{font-size:14.5px;color:#4b535d;line-height:1.5}
   .an-row p strong{color:#0b0c0e}
   .no-promise{display:flex;align-items:flex-start;gap:10px;margin-top:26px;padding-top:22px;border-top:1px solid var(--border);color:var(--muted);font-size:15px;max-width:520px}
-  .no-promise i{font-size:19px;flex-shrink:0;margin-top:2px;color:var(--accent)}
+  .no-promise .ph{font-size:19px;flex-shrink:0;margin-top:2px;color:var(--accent)}
 
   /* Etapas */
   .steps{background:#f2f4f7;color:#0b0c0e}
@@ -157,12 +159,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .about-badge{position:absolute;left:22px;bottom:22px;z-index:1;display:flex;align-items:center;gap:12px}
   .about-badge img{width:44px;height:auto;object-fit:contain;filter:none}
   .about-badge div{font-size:13px;color:var(--soft);line-height:1.4}
-  .about-badge strong{display:block;font-family:'Cinzel',serif;font-size:15px;color:var(--text);letter-spacing:.06em;font-weight:600}
+  .about-badge strong{display:block;font-size:15px;color:var(--text);letter-spacing:.06em;font-weight:600}
   .about-text p{color:var(--muted);margin-bottom:18px}
   .features{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:32px 0 40px}
   .feature{display:flex;gap:14px;align-items:center;font-size:15px;color:var(--soft)}
   .feature .icon-box{width:42px;height:42px;border-radius:10px}
-  .feature .icon-box i{font-size:22px}
+  .feature .icon-box .ph{font-size:22px}
 
   /* FAQ */
   .faq{background:#f2f4f7;color:#0b0c0e}
@@ -181,7 +183,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   details .answer strong{color:#0b0c0e}
 
   /* CTA final */
-  .final{position:relative;text-align:left;overflow:hidden;background:#080b10 url('final-cta-bg.png') center/cover no-repeat}
+  .final{position:relative;text-align:left;overflow:hidden;background:#080b10 url('final-cta-bg.webp') center/cover no-repeat}
   .final::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,11,16,.94) 0%,rgba(8,11,16,.86) 32%,rgba(8,11,16,.52) 64%,rgba(8,11,16,.18) 100%);pointer-events:none}
   .final .container{position:relative;z-index:1}
   .final-icon{width:72px;margin:0 0 32px;opacity:.9}
@@ -195,7 +197,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .foot-logo{width:150px;opacity:.85}
   .foot-info{display:flex;flex-direction:column;gap:10px;color:var(--muted);font-size:14px}
   .foot-info span{display:flex;align-items:center;gap:10px}
-  .foot-info i{font-size:17px}
+  .foot-info .ph{font-size:17px}
   .disclaimer{margin-top:40px;padding-top:28px;border-top:1px solid var(--border);color:#6f7680;font-size:13px;line-height:1.6}
 
   /* Flutuante */
@@ -220,7 +222,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .section-head{margin-bottom:28px}
     .hero{height:auto;min-height:0;display:flex;flex-direction:column;align-items:stretch;padding:0 0 44px;background:var(--bg)}
     .hero::after{display:none}
-    .hero-mobile-img{display:block;position:relative;width:100%;height:min(115vw,560px);flex:none;background:url('mobile-bg.png') center top/cover no-repeat}
+    .hero-mobile-img{display:block;position:relative;width:100%;height:min(115vw,560px);flex:none;background:url('mobile-bg.webp') center top/cover no-repeat}
     .hero-mobile-img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 32%,rgba(10,11,13,.65) 55%,rgba(10,11,13,0) 78%)}
     .hero-logo{display:none}
     .scroll-logo{display:flex;justify-content:center;position:fixed;top:0;left:0;right:0;z-index:60;padding:10px 0;background:rgba(10,11,13,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(255,255,255,.06);transform:translateY(-100%);opacity:0;transition:transform .35s ease,opacity .35s ease;pointer-events:none}
@@ -259,16 +261,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWLG3H4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none"><symbol id="i-bank" viewBox="0 0 256 256"><path d="M232,96H24L128,32Z" opacity="0.2"/><path d="M24,104H48v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16H208V104h24a8,8,0,0,0,4.19-14.81l-104-64a8,8,0,0,0-8.38,0l-104,64A8,8,0,0,0,24,104Zm40,0H96v64H64Zm80,0v64H112V104Zm48,64H160V104h32ZM128,41.39,203.74,88H52.26ZM248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208Z"/></symbol><symbol id="i-biohazard" viewBox="0 0 256 256"><path d="M184,132a56,56,0,1,1-56-56A56,56,0,0,1,184,132Z" opacity="0.2"/><path d="M185.68,104.28q-1.4-2.88-3.06-5.6a60,60,0,0,0-26.92-78,8,8,0,0,0-7.4,14.19A44,44,0,0,1,170.72,84.4a63.85,63.85,0,0,0-85.46,0A44,44,0,0,1,107.7,34.87a8,8,0,1,0-7.4-14.19,60,60,0,0,0-26.93,78,62.59,62.59,0,0,0-3.05,5.58A60.07,60.07,0,0,0,16,164a8,8,0,0,0,16,0,44.09,44.09,0,0,1,32.89-42.58A63.94,63.94,0,0,0,109,193.11a44,44,0,0,1-56.65,8,8,8,0,1,0-8.62,13.47A60,60,0,0,0,126.74,196l1.26,0,1.26,0a60,60,0,0,0,83.05,18.59,8,8,0,1,0-8.62-13.47,44,44,0,0,1-56.65-8,63.94,63.94,0,0,0,44.07-71.69A44.09,44.09,0,0,1,224,164a8,8,0,0,0,16,0A60.07,60.07,0,0,0,185.68,104.28ZM128,84a47.91,47.91,0,0,1,35.56,15.79,44,44,0,0,1-71.13,0A47.89,47.89,0,0,1,128,84Zm.12,49.92-.12.2-.12-.2h.24ZM80,132a47.6,47.6,0,0,1,1.44-11.65,44,44,0,0,1,36,58.46A48.07,48.07,0,0,1,80,132Zm58.57,46.81a44,44,0,0,1,36-58.46,48,48,0,0,1-36,58.46Z"/></symbol><symbol id="i-briefcase" viewBox="0 0 256 256"><path d="M224,118.31V200a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V118.31h0A191.14,191.14,0,0,0,128,144,191.08,191.08,0,0,0,224,118.31Z" opacity="0.2"/><path d="M104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112ZM232,72V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V72A16,16,0,0,1,40,56H80V48a24,24,0,0,1,24-24h48a24,24,0,0,1,24,24v8h40A16,16,0,0,1,232,72ZM96,56h64V48a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8ZM40,72v41.62A184.07,184.07,0,0,0,128,136a184,184,0,0,0,88-22.39V72ZM216,200V131.63A200.25,200.25,0,0,1,128,152a200.19,200.19,0,0,1-88-20.36V200H216Z"/></symbol><symbol id="i-calculator" viewBox="0 0 256 256"><path d="M176,64v48H80V64Z" opacity="0.2"/><path d="M80,120h96a8,8,0,0,0,8-8V64a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8v48A8,8,0,0,0,80,120Zm8-48h80v32H88ZM200,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V40A16,16,0,0,0,200,24Zm0,192H56V40H200ZM100,148a12,12,0,1,1-12-12A12,12,0,0,1,100,148Zm40,0a12,12,0,1,1-12-12A12,12,0,0,1,140,148Zm40,0a12,12,0,1,1-12-12A12,12,0,0,1,180,148Zm-80,40a12,12,0,1,1-12-12A12,12,0,0,1,100,188Zm40,0a12,12,0,1,1-12-12A12,12,0,0,1,140,188Zm40,0a12,12,0,1,1-12-12A12,12,0,0,1,180,188Z"/></symbol><symbol id="i-caret-down" viewBox="0 0 256 256"><path d="M208,96l-80,80L48,96Z" opacity="0.2"/><path d="M215.39,92.94A8,8,0,0,0,208,88H48a8,8,0,0,0-5.66,13.66l80,80a8,8,0,0,0,11.32,0l80-80A8,8,0,0,0,215.39,92.94ZM128,164.69,67.31,104H188.69Z"/></symbol><symbol id="i-chats-circle" viewBox="0 0 256 256"><path d="M231.66,213.73a8,8,0,0,1-9.93,9.93L194,215.5A72.05,72.05,0,0,1,92.06,175.89h0c1.31.07,2.62.11,3.94.11a72,72,0,0,0,67.93-95.88h0A72,72,0,0,1,223.5,186Z" opacity="0.2"/><path d="M232.07,186.76a80,80,0,0,0-62.5-114.17A80,80,0,1,0,23.93,138.76l-7.27,24.71a16,16,0,0,0,19.87,19.87l24.71-7.27a80.39,80.39,0,0,0,25.18,7.35,80,80,0,0,0,108.34,40.65l24.71,7.27a16,16,0,0,0,19.87-19.86ZM62,159.5a8.28,8.28,0,0,0-2.26.32L32,168l8.17-27.76a8,8,0,0,0-.63-6,64,64,0,1,1,26.26,26.26A8,8,0,0,0,62,159.5Zm153.79,28.73L224,216l-27.76-8.17a8,8,0,0,0-6,.63,64.05,64.05,0,0,1-85.87-24.88A79.93,79.93,0,0,0,174.7,89.71a64,64,0,0,1,41.75,92.48A8,8,0,0,0,215.82,188.23Z"/></symbol><symbol id="i-chats-teardrop" viewBox="0 0 256 256"><path d="M232,152v64a8,8,0,0,1-8,8H160a72,72,0,0,1-67.9-48H96a72,72,0,0,0,72-72h0a71.83,71.83,0,0,0-4.07-23.88h0A72,72,0,0,1,232,152Z" opacity="0.2"/><path d="M169.57,72.59A80,80,0,0,0,16,104v64a16,16,0,0,0,16,16H86.67A80.15,80.15,0,0,0,160,232h64a16,16,0,0,0,16-16V152A80,80,0,0,0,169.57,72.59ZM32,104a64,64,0,1,1,64,64H32ZM224,216H160a64.14,64.14,0,0,1-55.68-32.43A79.93,79.93,0,0,0,174.7,89.71,64,64,0,0,1,224,152Z"/></symbol><symbol id="i-clipboard-text" viewBox="0 0 256 256"><path d="M208,48V216a8,8,0,0,1-8,8H56a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8H96a39.83,39.83,0,0,0-8,24v8h80V64a39.83,39.83,0,0,0-8-24h40A8,8,0,0,1,208,48Z" opacity="0.2"/><path d="M168,152a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,152Zm-8-40H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm56-64V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V48A16,16,0,0,1,56,32H92.26a47.92,47.92,0,0,1,71.48,0H200A16,16,0,0,1,216,48ZM96,64h64a32,32,0,0,0-64,0ZM200,48H173.25A47.93,47.93,0,0,1,176,64v8a8,8,0,0,1-8,8H88a8,8,0,0,1-8-8V64a47.93,47.93,0,0,1,2.75-16H56V216H200Z"/></symbol><symbol id="i-clock" viewBox="0 0 256 256"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol><symbol id="i-cursor-click" viewBox="0 0 256 256"><path d="M213.66,201,201,213.66a8,8,0,0,1-11.31,0l-51.31-51.31a8,8,0,0,0-13,2.46l-17.82,46.41a8,8,0,0,1-14.85-.71L40.41,50.44a8,8,0,0,1,10-10L210.51,92.68a8,8,0,0,1,.71,14.85l-46.41,17.82a8,8,0,0,0-2.46,13l51.31,51.31A8,8,0,0,1,213.66,201Z" opacity="0.2"/><path d="M88,24V16a8,8,0,0,1,16,0v8a8,8,0,0,1-16,0ZM16,104h8a8,8,0,0,0,0-16H16a8,8,0,0,0,0,16ZM124.42,39.16a8,8,0,0,0,10.74-3.58l8-16a8,8,0,0,0-14.31-7.16l-8,16A8,8,0,0,0,124.42,39.16Zm-96,81.69-16,8a8,8,0,0,0,7.16,14.31l16-8a8,8,0,1,0-7.16-14.31ZM219.31,184a16,16,0,0,1,0,22.63l-12.68,12.68a16,16,0,0,1-22.63,0L132.7,168,115,214.09c0,.1-.08.21-.13.32a15.83,15.83,0,0,1-14.6,9.59l-.79,0a15.83,15.83,0,0,1-14.41-11L32.8,52.92A16,16,0,0,1,52.92,32.8L213,85.07a16,16,0,0,1,1.41,29.8l-.32.13L168,132.69ZM208,195.31,156.69,144h0a16,16,0,0,1,4.93-26l.32-.14,45.95-17.64L48,48l52.2,159.86,17.65-46c0-.11.08-.22.13-.33a16,16,0,0,1,11.69-9.34,16.72,16.72,0,0,1,3-.28,16,16,0,0,1,11.3,4.69L195.31,208Z"/></symbol><symbol id="i-device-mobile" viewBox="0 0 256 256"><path d="M192,56V200H64V56Z" opacity="0.2"/><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></symbol><symbol id="i-factory" viewBox="0 0 256 256"><path d="M216,136v80H40V88l64,48V88l64,48Z" opacity="0.2"/><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></symbol><symbol id="i-file-x" viewBox="0 0 256 256"><path d="M208,88H152V32Z" opacity="0.2"/><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-42.34-82.34L139.31,152l18.35,18.34a8,8,0,0,1-11.32,11.32L128,163.31l-18.34,18.35a8,8,0,0,1-11.32-11.32L116.69,152,98.34,133.66a8,8,0,0,1,11.32-11.32L128,140.69l18.34-18.35a8,8,0,0,1,11.32,11.32Z"/></symbol><symbol id="i-fire" viewBox="0 0 256 256"><path d="M208,144a80,80,0,0,1-160,0c0-30.57,14.42-58.26,31-80l33,32,26.27-72C159.86,41.92,208,88.15,208,144Z" opacity="0.2"/><path d="M183.89,153.34a57.6,57.6,0,0,1-46.56,46.55A8.75,8.75,0,0,1,136,200a8,8,0,0,1-1.32-15.89c16.57-2.79,30.63-16.85,33.44-33.45a8,8,0,0,1,15.78,2.68ZM216,144a88,88,0,0,1-176,0c0-27.92,11-56.47,32.66-84.85a8,8,0,0,1,11.93-.89l24.12,23.41,22-60.41a8,8,0,0,1,12.63-3.41C165.21,36,216,84.55,216,144Zm-16,0c0-46.09-35.79-85.92-58.21-106.33L119.52,98.74a8,8,0,0,1-13.09,3L80.06,76.16C64.09,99.21,56,122,56,144a72,72,0,0,0,144,0Z"/></symbol><symbol id="i-flask" viewBox="0 0 256 256"><path d="M208,216H48a8,8,0,0,1-6.86-12.12l30.48-50.8h0c13.23-2.48,32-1.41,56.37,10.92,32.25,16.33,54.75,12.91,67.5,7.65h0l19.34,32.23A8,8,0,0,1,208,216Z" opacity="0.2"/><path d="M221.69,199.77,160,96.92V40h8a8,8,0,0,0,0-16H88a8,8,0,0,0,0,16h8V96.92L34.31,199.77A16,16,0,0,0,48,224H208a16,16,0,0,0,13.72-24.23ZM110.86,103.25A7.93,7.93,0,0,0,112,99.14V40h32V99.14a7.93,7.93,0,0,0,1.14,4.11L183.36,167c-12,2.37-29.07,1.37-51.75-10.11-15.91-8.05-31.05-12.32-45.22-12.81ZM48,208l28.54-47.58c14.25-1.73,30.31,1.85,47.82,10.72,19,9.61,35,12.88,48,12.88a69.89,69.89,0,0,0,19.55-2.7L208,208Z"/></symbol><symbol id="i-folder-open" viewBox="0 0 256 256"><path d="M208,88v24H69.77a8,8,0,0,0-7.59,5.47L32,208V64a8,8,0,0,1,8-8H93.33a8,8,0,0,1,4.8,1.6L128,80h72A8,8,0,0,1,208,88Z" opacity="0.2"/><path d="M245,110.64A16,16,0,0,0,232,104H216V88a16,16,0,0,0-16-16H130.67L102.94,51.2a16.14,16.14,0,0,0-9.6-3.2H40A16,16,0,0,0,24,64V208a8,8,0,0,0,8,8H211.1a8,8,0,0,0,7.59-5.47l28.49-85.47A16.05,16.05,0,0,0,245,110.64ZM93.34,64,123.2,86.4A8,8,0,0,0,128,88h72v16H69.77a16,16,0,0,0-15.18,10.94L40,158.7V64Zm112,136H43.1l26.67-80H232Z"/></symbol><symbol id="i-hard-hat" viewBox="0 0 256 256"><path d="M104,51.31V160H40V136A88,88,0,0,1,104,51.31Zm48,0V160h64V136A88,88,0,0,0,152,51.31Z" opacity="0.2"/><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></symbol><symbol id="i-info" viewBox="0 0 256 256"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M144,176a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176Zm88-48A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128ZM124,96a12,12,0,1,0-12-12A12,12,0,0,0,124,96Z"/></symbol><symbol id="i-lightning" viewBox="0 0 256 256"><path d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2"/><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></symbol><symbol id="i-list-checks" viewBox="0 0 256 256"><path d="M216,64V192H128V64Z" opacity="0.2"/><path d="M224,128a8,8,0,0,1-8,8H128a8,8,0,0,1,0-16h88A8,8,0,0,1,224,128ZM128,72h88a8,8,0,0,0,0-16H128a8,8,0,0,0,0,16Zm88,112H128a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16ZM82.34,42.34,56,68.69,45.66,58.34A8,8,0,0,0,34.34,69.66l16,16a8,8,0,0,0,11.32,0l32-32A8,8,0,0,0,82.34,42.34Zm0,64L56,132.69,45.66,122.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Zm0,64L56,196.69,45.66,186.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Z"/></symbol><symbol id="i-list-numbers" viewBox="0 0 256 256"><path d="M216,64V192H104V64Z" opacity="0.2"/><path d="M224,128a8,8,0,0,1-8,8H104a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM104,72H216a8,8,0,0,0,0-16H104a8,8,0,0,0,0,16ZM216,184H104a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM43.58,55.16,48,52.94V104a8,8,0,0,0,16,0V40a8,8,0,0,0-11.58-7.16l-16,8a8,8,0,0,0,7.16,14.32ZM79.77,156.72a23.73,23.73,0,0,0-9.6-15.95,24.86,24.86,0,0,0-34.11,4.7,23.63,23.63,0,0,0-3.57,6.46,8,8,0,1,0,15,5.47,7.84,7.84,0,0,1,1.18-2.13,8.76,8.76,0,0,1,12-1.59A7.91,7.91,0,0,1,63.93,159a7.64,7.64,0,0,1-1.57,5.78,1,1,0,0,0-.08.11L33.59,203.21A8,8,0,0,0,40,216H72a8,8,0,0,0,0-16H56l19.08-25.53A23.47,23.47,0,0,0,79.77,156.72Z"/></symbol><symbol id="i-lock-key" viewBox="0 0 256 256"><path d="M208,88H48a8,8,0,0,0-8,8V208a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V96A8,8,0,0,0,208,88Zm-80,72a20,20,0,1,1,20-20A20,20,0,0,1,128,160Z" opacity="0.2"/><path d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Zm-80-96a28,28,0,0,0-8,54.83V184a8,8,0,0,0,16,0V166.83A28,28,0,0,0,128,112Zm0,40a12,12,0,1,1,12-12A12,12,0,0,1,128,152Z"/></symbol><symbol id="i-magnifying-glass" viewBox="0 0 256 256"><path d="M192,112a80,80,0,1,1-80-80A80,80,0,0,1,192,112Z" opacity="0.2"/><path d="M229.66,218.34,179.6,168.28a88.21,88.21,0,1,0-11.32,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></symbol><symbol id="i-path" viewBox="0 0 256 256"><path d="M224,200a24,24,0,1,1-24-24A24,24,0,0,1,224,200Z" opacity="0.2"/><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></symbol><symbol id="i-phone" viewBox="0 0 256 256"><path d="M223.94,174.08A48.33,48.33,0,0,1,176,216,136,136,0,0,1,40,80,48.33,48.33,0,0,1,81.92,32.06a8,8,0,0,1,8.3,4.8l21.13,47.2a8,8,0,0,1-.66,7.53L89.32,117a7.93,7.93,0,0,0-.54,7.81c8.27,16.93,25.77,34.22,42.75,42.41a7.92,7.92,0,0,0,7.83-.59l25-21.3a8,8,0,0,1,7.59-.69l47.16,21.13A8,8,0,0,1,223.94,174.08Z" opacity="0.2"/><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol><symbol id="i-prohibit" viewBox="0 0 256 256"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm88,104a87.56,87.56,0,0,1-20.41,56.28L71.72,60.4A88,88,0,0,1,216,128ZM40,128A87.56,87.56,0,0,1,60.41,71.72L184.28,195.6A88,88,0,0,1,40,128Z"/></symbol><symbol id="i-pulse" viewBox="0 0 256 256"><path d="M96,40l33.52,88H56Zm104,88H129.52L160,208Z" opacity="0.2"/><path d="M240,128a8,8,0,0,1-8,8H204.94l-37.78,75.58A8,8,0,0,1,160,216h-.4a8,8,0,0,1-7.08-5.14L95.35,60.76,63.28,131.31A8,8,0,0,1,56,136H24a8,8,0,0,1,0-16H50.85L88.72,36.69a8,8,0,0,1,14.76.46l57.51,151,31.85-63.71A8,8,0,0,1,200,120h32A8,8,0,0,1,240,128Z"/></symbol><symbol id="i-question" viewBox="0 0 256 256"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></symbol><symbol id="i-receipt" viewBox="0 0 256 256"><path d="M224,56V208l-32-16-32,16-32-16L96,208,64,192,32,208V56a8,8,0,0,1,8-8H216A8,8,0,0,1,224,56Z" opacity="0.2"/><path d="M72,104a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm8,40h96a8,8,0,0,0,0-16H80a8,8,0,0,0,0,16ZM232,56V208a8,8,0,0,1-11.58,7.15L192,200.94l-28.42,14.21a8,8,0,0,1-7.16,0L128,200.94,99.58,215.15a8,8,0,0,1-7.16,0L64,200.94,35.58,215.15A8,8,0,0,1,24,208V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-16,0H40V195.06l20.42-10.22a8,8,0,0,1,7.16,0L96,199.06l28.42-14.22a8,8,0,0,1,7.16,0L160,199.06l28.42-14.22a8,8,0,0,1,7.16,0L216,195.06Z"/></symbol><symbol id="i-scales" viewBox="0 0 256 256"><path d="M56,88l32,80c0,17.67-20,24-32,24s-32-6.33-32-24ZM200,56l-32,80c0,17.67,20,24,32,24s32-6.33,32-24Z" opacity="0.2"/><path d="M239.43,133l-32-80h0a8,8,0,0,0-9.16-4.84L136,62V40a8,8,0,0,0-16,0V65.58L54.26,80.19A8,8,0,0,0,48.57,85h0v.06L16.57,165a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32a7.92,7.92,0,0,0-.57-3L66.92,93.77,120,82V208H104a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16H136V78.42L187,67.1,160.57,133a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32A7.92,7.92,0,0,0,239.43,133ZM56,184c-7.53,0-22.76-3.61-23.93-14.64L56,109.54l23.93,59.82C78.76,180.39,63.53,184,56,184Zm144-32c-7.53,0-22.76-3.61-23.93-14.64L200,77.54l23.93,59.82C222.76,148.39,207.53,152,200,152Z"/></symbol><symbol id="i-shield-check" viewBox="0 0 256 256"><path d="M216,56v56c0,96-88,120-88,120S40,208,40,112V56a8,8,0,0,1,8-8H208A8,8,0,0,1,216,56Z" opacity="0.2"/><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></symbol><symbol id="i-sign-out" viewBox="0 0 256 256"><path d="M224,56V200a16,16,0,0,1-16,16H48V40H208A16,16,0,0,1,224,56Z" opacity="0.2"/><path d="M120,216a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V40a8,8,0,0,1,8-8h64a8,8,0,0,1,0,16H56V208h56A8,8,0,0,1,120,216Zm109.66-93.66-40-40a8,8,0,0,0-11.32,11.32L204.69,120H112a8,8,0,0,0,0,16h92.69l-26.35,26.34a8,8,0,0,0,11.32,11.32l40-40A8,8,0,0,0,229.66,122.34Z"/></symbol><symbol id="i-speaker-high" viewBox="0 0 256 256"><path d="M80,88v80H32a8,8,0,0,1-8-8V96a8,8,0,0,1,8-8Z" opacity="0.2"/><path d="M155.51,24.81a8,8,0,0,0-8.42.88L77.25,80H32A16,16,0,0,0,16,96v64a16,16,0,0,0,16,16H77.25l69.84,54.31A8,8,0,0,0,160,224V32A8,8,0,0,0,155.51,24.81ZM32,96H72v64H32ZM144,207.64,88,164.09V91.91l56-43.55Zm54-106.08a40,40,0,0,1,0,52.88,8,8,0,0,1-12-10.58,24,24,0,0,0,0-31.72,8,8,0,0,1,12-10.58ZM248,128a79.9,79.9,0,0,1-20.37,53.34,8,8,0,0,1-11.92-10.67,64,64,0,0,0,0-85.33,8,8,0,1,1,11.92-10.67A79.83,79.83,0,0,1,248,128Z"/></symbol><symbol id="i-thermometer-hot" viewBox="0 0 256 256"><path d="M152,138V48a32,32,0,0,0-64,0v90a56,56,0,1,0,64,0Zm-32,70a24,24,0,1,1,24-24A24,24,0,0,1,120,208Z" opacity="0.2"/><path d="M128,153V48a8,8,0,0,0-16,0V153a32,32,0,1,0,16,0Zm-8,47a16,16,0,1,1,16-16A16,16,0,0,1,120,200Zm40-66V48a40,40,0,0,0-80,0v86a64,64,0,1,0,80,0Zm-40,98a48,48,0,0,1-27.42-87.4A8,8,0,0,0,96,138V48a24,24,0,0,1,48,0v90a8,8,0,0,0,3.42,6.56A48,48,0,0,1,120,232ZM177.3,80.77a8,8,0,0,1,2.33-11.07c15-9.79,26.87-4.75,35.51-1.06C223,72,227.76,74,235.63,68.89a8,8,0,0,1,8.74,13.41C237.88,86.53,232,88,226.69,88c-7,0-12.92-2.54-17.83-4.63C201,80,196.24,78,188.37,83.11A8,8,0,0,1,177.3,80.77Zm69.4,22.46a8,8,0,0,1-2.33,11.07C237.88,118.53,232,120,226.69,120c-7,0-12.92-2.54-17.83-4.63-7.87-3.36-12.62-5.38-20.49-.25a8,8,0,0,1-8.74-13.41c15-9.79,26.87-4.75,35.51-1.06,7.87,3.36,12.62,5.39,20.49.25A8,8,0,0,1,246.7,103.23Z"/></symbol><symbol id="i-user-check" viewBox="0 0 256 256"><path d="M168,100a60,60,0,1,1-60-60A60,60,0,0,1,168,100Z" opacity="0.2"/><path d="M144,157.68a68,68,0,1,0-71.9,0c-20.65,6.76-39.23,19.39-54.17,37.17a8,8,0,0,0,12.25,10.3C50.25,181.19,77.91,168,108,168s57.75,13.19,77.87,37.15a8,8,0,0,0,12.25-10.3C183.18,177.07,164.6,164.44,144,157.68ZM56,100a52,52,0,1,1,52,52A52.06,52.06,0,0,1,56,100Zm197.66,33.66-32,32a8,8,0,0,1-11.32,0l-16-16a8,8,0,0,1,11.32-11.32L216,148.69l26.34-26.35a8,8,0,0,1,11.32,11.32Z"/></symbol><symbol id="i-user-focus" viewBox="0 0 256 256"><path d="M160,112a32,32,0,1,1-32-32A32,32,0,0,1,160,112Z" opacity="0.2"/><path d="M224,40V76a8,8,0,0,1-16,0V48H180a8,8,0,0,1,0-16h36A8,8,0,0,1,224,40Zm-8,132a8,8,0,0,0-8,8v28H180a8,8,0,0,0,0,16h36a8,8,0,0,0,8-8V180A8,8,0,0,0,216,172ZM76,208H48V180a8,8,0,0,0-16,0v36a8,8,0,0,0,8,8H76a8,8,0,0,0,0-16ZM40,84a8,8,0,0,0,8-8V48H76a8,8,0,0,0,0-16H40a8,8,0,0,0-8,8V76A8,8,0,0,0,40,84Zm136,92a8,8,0,0,1-6.41-3.19,52,52,0,0,0-83.2,0,8,8,0,1,1-12.8-9.62A67.94,67.94,0,0,1,101,141.51a40,40,0,1,1,53.94,0,67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,176,176Zm-48-40a24,24,0,1,0-24-24A24,24,0,0,0,128,136Z"/></symbol><symbol id="i-wallet" viewBox="0 0 256 256"><path d="M224,80V192a8,8,0,0,1-8,8H56a16,16,0,0,1-16-16V56A16,16,0,0,0,56,72H216A8,8,0,0,1,224,80Z" opacity="0.2"/><path d="M216,64H56a8,8,0,0,1,0-16H192a8,8,0,0,0,0-16H56A24,24,0,0,0,32,56V184a24,24,0,0,0,24,24H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,128H56a8,8,0,0,1-8-8V78.63A23.84,23.84,0,0,0,56,80H216Zm-48-60a12,12,0,1,1,12,12A12,12,0,0,1,168,132Z"/></symbol><symbol id="i-warning" viewBox="0 0 256 256"><path d="M215.46,216H40.54C27.92,216,20,202.79,26.13,192.09L113.59,40.22c6.3-11,22.52-11,28.82,0l87.46,151.87C236,202.79,228.08,216,215.46,216Z" opacity="0.2"/><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"/></symbol></svg>
 
-<div class="scroll-logo" aria-hidden="true"><img src="logo.png" alt=""></div>
+<div class="scroll-logo" aria-hidden="true"><img src="logo.webp" alt="" width="440" height="383" loading="lazy" decoding="async"></div>
 
 <!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-mobile-img"></div>
   <div class="container">
     <div class="hero-content">
-      <img class="hero-logo" src="logo.png" alt="Levi Nascimento Advogado - OAB 190124">
-      <div class="eyebrow"><span class="eb-ico"><i class="ph-duotone ph-scales"></i></span>Advogado Trabalhista</div>
+      <img class="hero-logo" src="logo.webp" alt="Levi Nascimento Advogado - OAB 190124" width="440" height="383" decoding="async">
+      <div class="eyebrow"><span class="eb-ico"><svg class="ph" aria-hidden="true"><use href="#i-scales"/></svg></span>Advogado Trabalhista</div>
       <h1>Trabalha exposto a condições insalubres ou perigosas?
         <span>Entenda se você tem direito ao <strong>adicional de insalubridade ou periculosidade</strong>.</span>
       </h1>
@@ -282,17 +285,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="agents" id="exposicao">
   <div class="container">
     <div class="section-head center reveal">
-      <div class="eyebrow"><span class="eb-ico"><i class="ph-duotone ph-warning"></i></span>Condições de trabalho</div>
+      <div class="eyebrow"><span class="eb-ico"><svg class="ph" aria-hidden="true"><use href="#i-warning"/></svg></span>Condições de trabalho</div>
       <h2>Você trabalha ou trabalhou exposto a alguma destas condições?</h2>
       <p class="lead">A exposição a agentes nocivos à saúde ou a situações de risco pode <strong>dar direito ao adicional</strong>. Cada caso depende das <strong>atividades exercidas</strong> e das <strong>condições reais de trabalho</strong>.</p>
     </div>
     <div class="agents-grid">
-      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><i class="ph-duotone ph-speaker-high"></i></div><h3>Ruído intenso</h3></div><p>Máquinas, equipamentos e ambientes com barulho constante.</p></div>
-      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><i class="ph-duotone ph-thermometer-hot"></i></div><h3>Calor</h3></div><p>Fornos, caldeiras, cozinhas industriais e ambientes de alta temperatura.</p></div>
-      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><i class="ph-duotone ph-flask"></i></div><h3>Produtos químicos</h3></div><p>Contato com substâncias, solventes, óleos, poeiras e agentes químicos.</p></div>
-      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><i class="ph-duotone ph-biohazard"></i></div><h3>Agentes biológicos</h3></div><p>Hospitais, clínicas, laboratórios, coleta de lixo e limpeza de áreas de risco.</p></div>
-      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><i class="ph-duotone ph-lightning"></i></div><h3>Eletricidade</h3></div><p>Atividades com instalações ou equipamentos energizados.</p></div>
-      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><i class="ph-duotone ph-fire"></i></div><h3>Inflamáveis</h3></div><p>Postos de combustível, armazenamento e transporte de inflamáveis.</p></div>
+      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-speaker-high"/></svg></div><h3>Ruído intenso</h3></div><p>Máquinas, equipamentos e ambientes com barulho constante.</p></div>
+      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-thermometer-hot"/></svg></div><h3>Calor</h3></div><p>Fornos, caldeiras, cozinhas industriais e ambientes de alta temperatura.</p></div>
+      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-flask"/></svg></div><h3>Produtos químicos</h3></div><p>Contato com substâncias, solventes, óleos, poeiras e agentes químicos.</p></div>
+      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-biohazard"/></svg></div><h3>Agentes biológicos</h3></div><p>Hospitais, clínicas, laboratórios, coleta de lixo e limpeza de áreas de risco.</p></div>
+      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-lightning"/></svg></div><h3>Eletricidade</h3></div><p>Atividades com instalações ou equipamentos energizados.</p></div>
+      <div class="agent card reveal"><div class="agent-top"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-fire"/></svg></div><h3>Inflamáveis</h3></div><p>Postos de combustível, armazenamento e transporte de inflamáveis.</p></div>
     </div>
     <div class="mini-cta reveal">
       <p>Se você já passou ou passa por alguma dessas situações, <strong>seu caso merece uma análise</strong>.</p>
@@ -305,16 +308,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="situations">
   <div class="container situations-wrap">
     <div class="reveal">
-      <div class="eyebrow"><span class="eb-ico"><i class="ph-duotone ph-user-focus"></i></span>Sua situação</div>
+      <div class="eyebrow"><span class="eb-ico"><svg class="ph" aria-hidden="true"><use href="#i-user-focus"/></svg></span>Sua situação</div>
       <h2>Ficar com a dúvida mantém a insegurança sobre o seu salário</h2>
       <p class="lead" style="margin-top:16px">Sem uma avaliação, você continua <strong>sem saber se o adicional é devido</strong> e, caso o pagamento esteja <strong>ausente ou incorreto</strong>, a situação permanece sem análise.</p>
       <a class="btn js-wa" href="#" data-cta="situacao" style="margin-top:28px"><svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Falar com Advogado Especialista</a>
     </div>
     <div class="sit-list">
-      <div class="sit card reveal"><div class="icon-box"><i class="ph-duotone ph-prohibit"></i></div><p><strong>Não recebe o adicional</strong>, mesmo trabalhando em condições de risco ou exposto a agentes nocivos.</p></div>
-      <div class="sit card reveal"><div class="icon-box"><i class="ph-duotone ph-receipt"></i></div><p><strong>Recebe, mas suspeita</strong> que o valor pago não está correto.</p></div>
-      <div class="sit card reveal"><div class="icon-box"><i class="ph-duotone ph-question"></i></div><p><strong>Não sabe se a sua função</strong> pode dar direito à insalubridade ou à periculosidade.</p></div>
-      <div class="sit card reveal"><div class="icon-box"><i class="ph-duotone ph-sign-out"></i></div><p><strong>Já saiu da empresa</strong> e quer entender se ainda pode buscar orientação.</p></div>
+      <div class="sit card reveal"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-prohibit"/></svg></div><p><strong>Não recebe o adicional</strong>, mesmo trabalhando em condições de risco ou exposto a agentes nocivos.</p></div>
+      <div class="sit card reveal"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-receipt"/></svg></div><p><strong>Recebe, mas suspeita</strong> que o valor pago não está correto.</p></div>
+      <div class="sit card reveal"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-question"/></svg></div><p><strong>Não sabe se a sua função</strong> pode dar direito à insalubridade ou à periculosidade.</p></div>
+      <div class="sit card reveal"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-sign-out"/></svg></div><p><strong>Já saiu da empresa</strong> e quer entender se ainda pode buscar orientação.</p></div>
     </div>
   </div>
 </section>
@@ -323,16 +326,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="analysis">
   <div class="container analysis-wrap">
     <div class="analysis-intro reveal">
-      <div class="eyebrow"><span class="eb-ico"><i class="ph-duotone ph-magnifying-glass"></i></span>Como o caso é analisado</div>
+      <div class="eyebrow"><span class="eb-ico"><svg class="ph" aria-hidden="true"><use href="#i-magnifying-glass"/></svg></span>Como o caso é analisado</div>
       <h2>Uma análise individual, feita a partir da sua realidade de trabalho</h2>
       <p class="lead">O advogado avalia a <strong>possibilidade de direito ao adicional</strong> e explica, com clareza, <strong>quais medidas são cabíveis</strong> no seu caso.</p>
-      <p class="no-promise"><i class="ph-duotone ph-info"></i><span>O objetivo é que você compreenda sua situação e tome uma <strong>decisão informada</strong>. Não há promessa de resultado.</span></p>
+      <p class="no-promise"><svg class="ph" aria-hidden="true"><use href="#i-info"/></svg><span>O objetivo é que você compreenda sua situação e tome uma <strong>decisão informada</strong>. Não há promessa de resultado.</span></p>
     </div>
     <div class="an-panel reveal">
-      <div class="an-row"><span class="an-num">01</span><div class="icon-box"><i class="ph-duotone ph-hard-hat"></i></div><div><h3>Atividades exercidas</h3><p>A função que você exerce ou exerceu e as tarefas do dia a dia.</p></div></div>
-      <div class="an-row"><span class="an-num">02</span><div class="icon-box"><i class="ph-duotone ph-factory"></i></div><div><h3>Condições de trabalho</h3><p>O ambiente, os agentes a que você esteve exposto e os riscos envolvidos.</p></div></div>
-      <div class="an-row"><span class="an-num">03</span><div class="icon-box"><i class="ph-duotone ph-folder-open"></i></div><div><h3>Documentos disponíveis</h3><p><strong>Contracheques</strong>, <strong>registros do vínculo empregatício</strong> e outros documentos do caso.</p></div></div>
-      <div class="an-row"><span class="an-num">04</span><div class="icon-box"><i class="ph-duotone ph-scales"></i></div><div><h3>Medidas cabíveis</h3><p>Verificação de <strong>diferenças de pagamento</strong>, provas necessárias e etapas do atendimento.</p></div></div>
+      <div class="an-row"><span class="an-num">01</span><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-hard-hat"/></svg></div><div><h3>Atividades exercidas</h3><p>A função que você exerce ou exerceu e as tarefas do dia a dia.</p></div></div>
+      <div class="an-row"><span class="an-num">02</span><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-factory"/></svg></div><div><h3>Condições de trabalho</h3><p>O ambiente, os agentes a que você esteve exposto e os riscos envolvidos.</p></div></div>
+      <div class="an-row"><span class="an-num">03</span><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-folder-open"/></svg></div><div><h3>Documentos disponíveis</h3><p><strong>Contracheques</strong>, <strong>registros do vínculo empregatício</strong> e outros documentos do caso.</p></div></div>
+      <div class="an-row"><span class="an-num">04</span><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-scales"/></svg></div><div><h3>Medidas cabíveis</h3><p>Verificação de <strong>diferenças de pagamento</strong>, provas necessárias e etapas do atendimento.</p></div></div>
     </div>
   </div>
 </section>
@@ -341,34 +344,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="steps">
   <div class="container">
     <div class="section-head center reveal">
-      <div class="eyebrow"><span class="eb-ico"><i class="ph-duotone ph-list-numbers"></i></span>Como funciona o atendimento</div>
+      <div class="eyebrow"><span class="eb-ico"><svg class="ph" aria-hidden="true"><use href="#i-list-numbers"/></svg></span>Como funciona o atendimento</div>
       <h2>Do primeiro contato à orientação sobre o seu caso</h2>
     </div>
     <div class="steps-grid">
       <div class="step reveal">
-        <div class="step-top"><div class="icon-box"><i class="ph-duotone ph-cursor-click"></i></div><span class="step-num">01</span></div>
+        <div class="step-top"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-cursor-click"/></svg></div><span class="step-num">01</span></div>
         <h3>Clique no botão</h3>
         <p>Você é direcionado ao <strong>WhatsApp do escritório</strong>.</p>
       </div>
       <div class="step reveal">
-        <div class="step-top"><div class="icon-box"><i class="ph-duotone ph-chats-circle"></i></div><span class="step-num">02</span></div>
+        <div class="step-top"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-chats-circle"/></svg></div><span class="step-num">02</span></div>
         <h3>Apresente sua situação</h3>
         <p>Informe a <strong>função exercida</strong>, as <strong>condições de trabalho</strong> e como é o <strong>pagamento do adicional</strong>.</p>
       </div>
       <div class="step reveal">
-        <div class="step-top"><div class="icon-box"><i class="ph-duotone ph-clipboard-text"></i></div><span class="step-num">03</span></div>
+        <div class="step-top"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-clipboard-text"/></svg></div><span class="step-num">03</span></div>
         <h3>Receba orientações</h3>
         <p>O escritório indica <strong>quais documentos são necessários</strong> para a análise jurídica.</p>
       </div>
       <div class="step reveal">
-        <div class="step-top"><div class="icon-box"><i class="ph-duotone ph-path"></i></div><span class="step-num">04</span></div>
+        <div class="step-top"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-path"/></svg></div><span class="step-num">04</span></div>
         <h3>Entenda os próximos passos</h3>
         <p>Com o caso analisado, você conhece as <strong>medidas possíveis</strong>, os <strong>riscos</strong> e as <strong>etapas envolvidas</strong>.</p>
       </div>
     </div>
     <div class="steps-cta reveal">
       <a class="btn js-wa" href="#" data-cta="etapas"><svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Falar com Advogado Especialista</a>
-      <p class="btn-note"><i class="ph-duotone ph-clock"></i>Atendimento iniciado pelo WhatsApp</p>
+      <p class="btn-note"><svg class="ph" aria-hidden="true"><use href="#i-clock"/></svg>Atendimento iniciado pelo WhatsApp</p>
     </div>
   </div>
 </section>
@@ -377,24 +380,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="about">
   <div class="container about-wrap">
     <div class="about-photo reveal">
-      <img src="mobile-bg.png" alt="Levi Nascimento, advogado trabalhista">
+      <img src="mobile-bg.webp" alt="Levi Nascimento, advogado trabalhista" width="820" height="1093" loading="lazy" decoding="async">
       <div class="about-badge">
-        <img src="icone.png" alt="">
+        <img src="icone.webp" alt="" width="160" height="189" loading="lazy" decoding="async">
         <div><strong>Levi Nascimento</strong>Advogado | OAB 190124</div>
       </div>
     </div>
     <div class="about-text reveal">
-      <div class="eyebrow"><span class="eb-ico"><i class="ph-duotone ph-bank"></i></span>Sobre o advogado</div>
+      <div class="eyebrow"><span class="eb-ico"><svg class="ph" aria-hidden="true"><use href="#i-bank"/></svg></span>Sobre o advogado</div>
       <h2 style="margin-bottom:22px">Levi Nascimento Advocacia</h2>
       <!-- PENDÊNCIA: inserir minibiografia validada pelo escritório (formação, tempo de atuação, região de atendimento, seccional da OAB). -->
       <p>Atuação jurídica trabalhista voltada à análise do direito ao <strong>adicional de insalubridade e periculosidade</strong>, para <strong>trabalhadores e ex-trabalhadores</strong> que querem entender a própria situação.</p>
       <p>Cada caso é avaliado de <strong>forma individual</strong>, considerando as atividades exercidas, as condições de trabalho e os documentos disponíveis.</p>
       <!-- PENDÊNCIA: confirmar com o escritório cada diferencial abaixo antes de publicar. -->
       <div class="features">
-        <div class="feature"><div class="icon-box"><i class="ph-duotone ph-user-check"></i></div>Atendimento direto com o advogado</div>
-        <div class="feature"><div class="icon-box"><i class="ph-duotone ph-device-mobile"></i></div>Contato facilitado pelo WhatsApp</div>
-        <div class="feature"><div class="icon-box"><i class="ph-duotone ph-list-checks"></i></div>Explicação clara das etapas</div>
-        <div class="feature"><div class="icon-box"><i class="ph-duotone ph-pulse"></i></div>Acompanhamento do caso</div>
+        <div class="feature"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-user-check"/></svg></div>Atendimento direto com o advogado</div>
+        <div class="feature"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-device-mobile"/></svg></div>Contato facilitado pelo WhatsApp</div>
+        <div class="feature"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-list-checks"/></svg></div>Explicação clara das etapas</div>
+        <div class="feature"><div class="icon-box"><svg class="ph" aria-hidden="true"><use href="#i-pulse"/></svg></div>Acompanhamento do caso</div>
       </div>
       <a class="btn js-wa" href="#" data-cta="sobre"><svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Falar com Advogado Especialista</a>
     </div>
@@ -405,41 +408,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="faq">
   <div class="container">
     <div class="section-head center reveal">
-      <div class="eyebrow"><span class="eb-ico"><i class="ph-duotone ph-chats-teardrop"></i></span>Dúvidas frequentes</div>
+      <div class="eyebrow"><span class="eb-ico"><svg class="ph" aria-hidden="true"><use href="#i-chats-teardrop"/></svg></span>Dúvidas frequentes</div>
       <h2>Perguntas que muitos trabalhadores fazem</h2>
     </div>
     <div class="faq-list">
       <details class="reveal">
-        <summary><i class="ph-duotone ph-question q-icon"></i>Não sei se minha função dá direito ao adicional. Posso entrar em contato?<i class="ph-duotone ph-caret-down chev"></i></summary>
+        <summary><svg class="ph q-icon" aria-hidden="true"><use href="#i-question"/></svg>Não sei se minha função dá direito ao adicional. Posso entrar em contato?<svg class="ph chev" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
         <div class="answer">Sim. Justamente para isso existe a análise. O direito ao adicional <strong>não depende só do nome do cargo</strong>, e sim das atividades exercidas e das condições reais de trabalho. No primeiro contato, o escritório coleta essas informações para avaliar o seu caso.</div>
       </details>
       <details class="reveal">
-        <summary><i class="ph-duotone ph-shield-check q-icon"></i>Tenho medo de prejudicar meu emprego ao procurar um advogado.<i class="ph-duotone ph-caret-down chev"></i></summary>
+        <summary><svg class="ph q-icon" aria-hidden="true"><use href="#i-shield-check"/></svg>Tenho medo de prejudicar meu emprego ao procurar um advogado.<svg class="ph chev" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
         <div class="answer">A conversa com o advogado é <strong>protegida pelo sigilo profissional</strong>. <strong>Buscar orientação não significa iniciar um processo</strong>: o objetivo é que você entenda sua situação e decida, com informação, o que fazer.</div>
       </details>
       <details class="reveal">
-        <summary><i class="ph-duotone ph-hard-hat q-icon"></i>A empresa fornece equipamentos de proteção. Ainda faz sentido analisar?<i class="ph-duotone ph-caret-down chev"></i></summary>
+        <summary><svg class="ph q-icon" aria-hidden="true"><use href="#i-hard-hat"/></svg>A empresa fornece equipamentos de proteção. Ainda faz sentido analisar?<svg class="ph chev" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
         <div class="answer">Sim. O fornecimento de equipamentos de proteção é um dos pontos avaliados, mas <strong>não encerra a questão por si só</strong>. Fatores como o tipo de agente ou risco, a eficácia dos equipamentos e a forma como eram utilizados fazem parte da análise.</div>
       </details>
       <details class="reveal">
-        <summary><i class="ph-duotone ph-calculator q-icon"></i>Já recebo um adicional, mas não sei se o valor está correto.<i class="ph-duotone ph-caret-down chev"></i></summary>
+        <summary><svg class="ph q-icon" aria-hidden="true"><use href="#i-calculator"/></svg>Já recebo um adicional, mas não sei se o valor está correto.<svg class="ph chev" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
         <div class="answer">A análise também verifica <strong>eventuais diferenças de pagamento</strong>. Com os seus contracheques e as informações sobre a sua atividade, o advogado avalia se o valor recebido está de acordo com a sua situação.</div>
       </details>
       <details class="reveal">
-        <summary><i class="ph-duotone ph-sign-out q-icon"></i>Já saí da empresa. Ainda posso buscar orientação?<i class="ph-duotone ph-caret-down chev"></i></summary>
+        <summary><svg class="ph q-icon" aria-hidden="true"><use href="#i-sign-out"/></svg>Já saí da empresa. Ainda posso buscar orientação?<svg class="ph chev" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
         <div class="answer">Sim. <strong>Ex-trabalhadores também podem ter o caso analisado</strong>. Existem <strong>prazos legais</strong> para buscar direitos trabalhistas após o fim do contrato, por isso é recomendável procurar orientação o quanto antes.</div>
       </details>
       <details class="reveal">
-        <summary><i class="ph-duotone ph-file-x q-icon"></i>Não tenho laudos nem todos os documentos. Isso impede a análise?<i class="ph-duotone ph-caret-down chev"></i></summary>
+        <summary><svg class="ph q-icon" aria-hidden="true"><use href="#i-file-x"/></svg>Não tenho laudos nem todos os documentos. Isso impede a análise?<svg class="ph chev" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
         <div class="answer"><strong>Não é necessário ter tudo em mãos</strong> para o primeiro contato. O escritório orienta quais documentos são importantes para o seu caso e como eles podem ser obtidos.</div>
       </details>
       <details class="reveal">
-        <summary><i class="ph-duotone ph-wallet q-icon"></i>Tenho receio dos custos e de quanto tempo pode levar.<i class="ph-duotone ph-caret-down chev"></i></summary>
+        <summary><svg class="ph q-icon" aria-hidden="true"><use href="#i-wallet"/></svg>Tenho receio dos custos e de quanto tempo pode levar.<svg class="ph chev" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
         <!-- PENDÊNCIA: confirmar com o escritório como são apresentadas as condições de honorários. -->
         <div class="answer">Essas informações são explicadas no atendimento, de acordo com o seu caso. Você conhece as condições e as etapas envolvidas <strong>antes de tomar qualquer decisão</strong>.</div>
       </details>
       <details class="reveal">
-        <summary><i class="ph-duotone ph-warning q-icon"></i>Não quero iniciar um processo sem entender os riscos.<i class="ph-duotone ph-caret-down chev"></i></summary>
+        <summary><svg class="ph q-icon" aria-hidden="true"><use href="#i-warning"/></svg>Não quero iniciar um processo sem entender os riscos.<svg class="ph chev" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
         <div class="answer">Esse é exatamente o objetivo da análise. O advogado explica as medidas cabíveis, as provas necessárias, <strong>os riscos e as etapas</strong>, para que você <strong>decida com segurança</strong>. Não há promessa de resultado.</div>
       </details>
     </div>
@@ -449,11 +452,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- CTA FINAL -->
 <section class="final">
   <div class="container reveal">
-    <img class="final-icon" src="icone.png" alt="">
+    <img class="final-icon" src="icone.webp" alt="" width="160" height="189" loading="lazy" decoding="async">
     <h2>Tire suas dúvidas sobre o adicional de insalubridade ou periculosidade</h2>
     <p class="lead">Apresente sua situação ao escritório <strong>pelo WhatsApp</strong> e receba orientações sobre os <strong>documentos</strong> e os <strong>próximos passos</strong> da análise.</p>
     <a class="btn js-wa" href="#" data-cta="final"><svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Falar com Advogado Especialista</a>
-    <p class="btn-note"><i class="ph-duotone ph-lock-key"></i>Conversa protegida pelo sigilo profissional</p>
+    <p class="btn-note"><svg class="ph" aria-hidden="true"><use href="#i-lock-key"/></svg>Conversa protegida pelo sigilo profissional</p>
   </div>
 </section>
 
@@ -461,10 +464,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
   <div class="container">
     <div class="foot">
-      <img class="foot-logo" src="logo.png" alt="Levi Nascimento Advogado - OAB 190124">
+      <img class="foot-logo" src="logo.webp" alt="Levi Nascimento Advogado - OAB 190124" width="440" height="383" loading="lazy" decoding="async">
       <div class="foot-info">
-        <span><i class="ph-duotone ph-briefcase"></i>Levi Nascimento Advocacia | OAB 190124</span>
-        <a class="js-wa" href="#" data-cta="rodape"><span><i class="ph-duotone ph-phone"></i>(21) 96475-3531</span></a>
+        <span><svg class="ph" aria-hidden="true"><use href="#i-briefcase"/></svg>Levi Nascimento Advocacia | OAB 190124</span>
+        <a class="js-wa" href="#" data-cta="rodape"><span><svg class="ph" aria-hidden="true"><use href="#i-phone"/></svg>(21) 96475-3531</span></a>
         <!-- PENDÊNCIA: confirmar endereço e região de atendimento. -->
       </div>
     </div>
